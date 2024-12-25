@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin-left: 40PX;
+    margin-top: 20PX;
+    padding: 10PX;
+    height: 500PX;
+    width: 500px;
+    border:solid black;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border:solid black;
+}
+
+/* Form Title */
+h1 {
+    text-align: center;
+    color: #633d3d;
+    font-size: 30PX;
+    font-weight:900;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #531cac;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #252222;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Error Messages */
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+/* Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
+}
+
+#reset {
+    background-color: #206e3a;
+}
+
+.btn:hover {
+    background-color: #438b53;
+}
+
+.btn.reset:hover {
+    background-color: #5a6268;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"></span>
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+        <br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+        <br><br>
+
+        <label for="qualification">Qualification:</label><br>
+        <select id="qualification" name="qualification">
+            <option value="">--Select Qualification--</option>
+            <option value="High School">B.sc</option>
+            <option value="Bachelor's">B.com</option>
+            <option value="Master's">B.E</option>
+            <option value="PhD">BBA</option>
+        </select>
+        <span id="qualificationError" class="error"></span>
+        <br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset" id="reset">Reset</button>
+    </form>
+
+    <script src="validation.js"></script>
+</body>
+</html>
